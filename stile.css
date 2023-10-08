@@ -1,0 +1,98 @@
+body {
+    background-color: #DFECE9;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.top-bar {
+    background-color: #5B9588;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: #080D0C;
+    margin: 0 20px;
+    padding-bottom: 20px; /* Додаємо підсвітку знизу */
+    border-bottom: 2px solid transparent; /* Початкова нижня границя */
+    transition: color 0.3s, border-bottom 0.3s, padding-bottom 0.3s; /* Плавний перехід на hover */
+}
+
+.top-bar a:hover {
+    color: #426C62; /* Змінюємо колір тексту при наведенні */
+    border-bottom: 2px solid #D6E6E2; /* Додаємо нижню границю при наведенні */
+    padding-bottom: 5px; /* Збільшуємо підсвітку знизу при наведенні */
+}
+.header {
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: #080D0C;
+}
+
+li a:hover {
+    color: #426C62;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #5B9588;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #5B9588;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2; 
+}
+
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #5B9588;
+}
+
+
+td:hover {
+    background-color: #426C62; 
+    color: #fff; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
