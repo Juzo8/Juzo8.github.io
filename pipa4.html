@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тижневий План</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 300px auto;
+        gap: 16px;
+        height: 100vh;
+        background: #f0f2f5;
+        padding: 16px;
+      }
+      .header {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        font-size: 2em;
+        background: #55596b;
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .sidebar {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 16px;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .block {
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        border-radius: 8px;
+        background: #ffffff;
+        overflow-y: auto;
+      }
+      .block .day-name {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .block textarea {
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        padding: 10px;
+        border-radius: 4px;
+        resize: none;
+      }
+      .main {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 16px;
+        padding: 20px;
+        grid-auto-rows: minmax(100px, auto);
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .day {
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        border-radius: 8px;
+        background: #ffffff;
+      }
+      .day .day-name {
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      .day textarea {
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        padding: 10px;
+        border-radius: 4px;
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">WEEKLY PLAN</div>
+
+    <div class="sidebar">
+      <div class="block">
+        <div class="day-name">TOP 3 GOALS</div>
+        <textarea placeholder="Enter your top 3 goals for the week"></textarea>
+      </div>
+      <div class="block">
+        <div class="day-name">EVERYTHING ELSE</div>
+        <textarea placeholder="List your tasks here"></textarea>
+      </div>
+      <div class="block">
+        <div class="day-name">NEXT WEEK</div>
+        <textarea placeholder="Plan ahead for next week"></textarea>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="day">
+        <div class="day-name">Monday</div>
+        <textarea placeholder="Add notes for Monday"></textarea>
+        <textarea placeholder="Note 1 for Monday"></textarea>
+        <textarea placeholder="Note 2 for Monday"></textarea>
+        <textarea placeholder="Note 3 for Monday"></textarea>
+        <textarea placeholder="Note 4 for Monday"></textarea>
+        <textarea placeholder="Note 5 for Monday"></textarea>
+        <textarea placeholder="Note 6 for Monday"></textarea>
+      </div>
+      <div class="day">
+        <div class="day-name">Tuesday</div>
+        <textarea placeholder="Add notes for Tuesday"></textarea>
+        <textarea placeholder="Note 1 for Monday"></textarea>
+        <textarea placeholder="Note 2 for Monday"></textarea>
+        <textarea placeholder="Note 3 for Monday"></textarea>
+        <textarea placeholder="Note 4 for Monday"></textarea>
+        <textarea placeholder="Note 5 for Monday"></textarea>
+        <textarea placeholder="Note 6 for Monday"></textarea>
+      </div>
+      <div class="day">
+        <div class="day-name">Wednesday</div>
+        <textarea placeholder="Add notes for Wednesday"></textarea>
+        <textarea placeholder="Note 1 for Monday"></textarea>
+        <textarea placeholder="Note 2 for Monday"></textarea>
+        <textarea placeholder="Note 3 for Monday"></textarea>
+        <textarea placeholder="Note 4 for Monday"></textarea>
+        <textarea placeholder="Note 5 for Monday"></textarea>
+        <textarea placeholder="Note 6 for Monday"></textarea>
+      </div>
+      <div class="day">
+        <div class="day-name">Thursday</div>
+        <textarea placeholder="Add notes for Thursday"></textarea>
+        <textarea placeholder="Note 1 for Monday"></textarea>
+        <textarea placeholder="Note 2 for Monday"></textarea>
+        <textarea placeholder="Note 3 for Monday"></textarea>
+        <textarea placeholder="Note 4 for Monday"></textarea>
+        <textarea placeholder="Note 5 for Monday"></textarea>
+        <textarea placeholder="Note 6 for Monday"></textarea>
+      </div>
+      <div class="day">
+        <div class="day-name">Friday</div>
+        <textarea placeholder="Add notes for Friday"></textarea>
+        <textarea placeholder="Note 1 for Monday"></textarea>
+        <textarea placeholder="Note 2 for Monday"></textarea>
+        <textarea placeholder="Note 3 for Monday"></textarea>
+        <textarea placeholder="Note 4 for Monday"></textarea>
+        <textarea placeholder="Note 5 for Monday"></textarea>
+        <textarea placeholder="Note 6 for Monday"></textarea>
+      </div>
+      <div class="day">
+        <div class="day-name">Saturday</div>
+        <textarea placeholder="Add notes for Saturday"></textarea>
+        <textarea placeholder="Note 1 for Monday"></textarea>
+        <textarea placeholder="Note 2 for Monday"></textarea>
+        <textarea placeholder="Note 3 for Monday"></textarea>
+        <textarea placeholder="Note 4 for Monday"></textarea>
+        <textarea placeholder="Note 5 for Monday"></textarea>
+        <textarea placeholder="Note 6 for Monday"></textarea>
+      </div>
+      <div class="day">
+        <div class="day-name">Sunday</div>
+        <textarea placeholder="Add notes for Sunday"></textarea>
+        <textarea placeholder="Note 1 for Monday"></textarea>
+        <textarea placeholder="Note 2 for Monday"></textarea>
+        <textarea placeholder="Note 3 for Monday"></textarea>
+        <textarea placeholder="Note 4 for Monday"></textarea>
+        <textarea placeholder="Note 5 for Monday"></textarea>
+        <textarea placeholder="Note 6 for Monday"></textarea>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <style>
+      <style > .logo {
+        color: #ff0000;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Arial", sans-serif;
+        cursor: pointer;
+        /* Видалення стилів для зображення */
+      }
+
+      .search-bar {
+        display: flex;
+        margin-left: 20px;
+        flex-grow: 1;
+        max-width: 500px; /* Зменшення максимальної ширини області пошуку */
+      }
+
+      .search-input {
+        flex-grow: 1;
+        padding: 5px;
+        margin-right: 5px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+      }
+
+      .search-button {
+        padding: 5px 10px;
+        background-color: #ccc;
+        border: none;
+        cursor: pointer;
+      }
+
+      .search-button:hover {
+        background-color: #bbb;
+      }
+      /* Інші стилі залишаються незмінними */
+
+      .sidebar-item {
+        /* Додавання іконок (приклад) */
+        background-image: url("icon.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 30px; /* Зміщення тексту, щоб не перекривати іконку */
+      }
+
+      .video-card {
+        /* Оновлення розмірів та розташування елементів */
+        flex-direction: column;
+      }
+
+      .video-title {
+        order: -1; /* Переміщення назви відео над мініатюрою */
+      }
+
+      .search-button:hover,
+      .video-card:hover,
+      .sidebar-item:hover {
+        /* Ефекти при наведенні */
+        background-color: #ddd;
+        transform: scale(1.05); /* Анімація збільшення */
+        transition: all 0.3s ease-in-out;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+        background-color: #f9f9f9;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #fff;
+        border-bottom: 1px solid #e1e1e1;
+      }
+
+      .logo {
+        color: #ff0000;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .user-icon {
+        cursor: pointer;
+      }
+
+      .content {
+        display: flex;
+        flex: 1;
+      }
+
+      .sidebar-item {
+        padding: 10px 0;
+        cursor: pointer;
+        margin-bottom: 10px; /* Додано нижній відступ між елементами меню */
+      }
+
+      .sidebar-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .sidebar {
+        min-width: 200px;
+        background-color: #fff;
+        border-right: 1px solid #e1e1e1;
+        padding: 20px;
+      }
+
+      .sidebar-item:hover {
+        background-color: #f0f0f0;
+      }
+
+      main {
+        flex: 1;
+        padding: 20px;
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; /* Вирівнювання карток на початок */
+        align-items: flex-start;
+        gap: 10px; /* Встановлення відстані між елементами */
+      }
+
+      .video-card {
+        width: calc(
+          33.333% - 10px
+        ); /* Вирахування ширини картки з урахуванням відступу */
+        margin-bottom: 20px; /* Відстань між рядами карток */
+        box-shadow: 0px 0px 5px #e0e0e0;
+        cursor: pointer;
+        background-color: #fff;
+        transition: box-shadow 0.3s ease;
+      }
+      .video-card:hover {
+        box-shadow: 0px 0px 10px #c0c0c0;
+      }
+      .video-card:last-child {
+        margin-right: 0; /* Остання картка в ряду не матиме відступу справа */
+      }
+      .video-thumbnail {
+        width: 100%;
+        height: 200px;
+        background-color: #ddd;
+        margin-bottom: 10px;
+      }
+
+      .video-title {
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .video-description {
+        padding: 0 10px 10px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">YT</div>
+      <div class="search-bar">
+        <input class="search-input" type="text" placeholder="Пошук..." />
+        <button class="search-button">Пошук</button>
+      </div>
+      <div class="user-icon">👤</div>
+    </header>
+    <div class="content">
+      <div class="sidebar">
+        <div class="sidebar-item">Головна</div>
+        <div class="sidebar-item">Shorts</div>
+        <div class="sidebar-item">Підписки</div>
+
+        <div class="sidebar-item">Мій канал</div>
+        <div class="sidebar-item">Історія</div>
+        <div class="sidebar-item">Ваші відео</div>
+        <div class="sidebar-item">Дивитись пізніше</div>
+
+        <div class="sidebar-item">Настройки</div>
+        <div class="sidebar-item">Жалоби</div>
+        <div class="sidebar-item">Довідник</div>
+      </div>
+
+      <main>
+        <div class="video-card">
+          <a
+            href="https://www.youtube.com/watch?v=A8bj2OiePZY&ab_channel=PHONKBeat"
+            target="_blank"
+          >
+            <div class="video-thumbnail"></div>
+            <h3 class="video-title">Відео 1</h3>
+            <p class="video-description">Опис відео 1</p>
+          </a>
+        </div>
+        <div class="video-card">
+          <a href="https://www.youtube.com/watch?v=example2" target="_blank">
+            <div class="video-thumbnail"></div>
+            <h3 class="video-title">Відео 2</h3>
+            <p class="video-description">Опис відео 2</p>
+          </a>
+        </div>
+        <div class="video-card">
+          <a href="https://www.youtube.com/watch?v=example2" target="_blank">
+            <div class="video-thumbnail"></div>
+            <h3 class="video-title">Відео 2</h3>
+            <p class="video-description">Опис відео 2</p>
+          </a>
+        </div>
+        <div class="video-card">
+          <a href="https://www.youtube.com/watch?v=example2" target="_blank">
+            <div class="video-thumbnail"></div>
+            <h3 class="video-title">Відео 2</h3>
+            <p class="video-description">Опис відео 2</p>
+          </a>
+        </div>
+        <div class="video-card">
+          <a href="https://www.youtube.com/watch?v=example2" target="_blank">
+            <div class="video-thumbnail"></div>
+            <h3 class="video-title">Відео 2</h3>
+            <p class="video-description">Опис відео 2</p>
+          </a>
+        </div>
+        <div class="video-card">
+          <a href="https://www.youtube.com/watch?v=example2" target="_blank">
+            <div class="video-thumbnail"></div>
+            <h3 class="video-title">Відео 2</h3>
+            <p class="video-description">Опис відео 2</p>
+          </a>
+        </div>
+        <div class="video-card">
+          <a href="https://www.youtube.com/watch?v=example2" target="_blank">
+            <div class="video-thumbnail"></div>
+            <h3 class="video-title">Відео 2</h3>
+            <p class="video-description">Опис відео 2</p>
+          </a>
+        </div>
+        <div class="video-card">
+          <a href="https://www.youtube.com/watch?v=example2" target="_blank">
+            <div class="video-thumbnail"></div>
+            <h3 class="video-title">Відео 2</h3>
+            <p class="video-description">Опис відео 2</p>
+          </a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
